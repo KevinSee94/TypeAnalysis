@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Team Type Analysis</title>
+	<script type="text/javascript" src="switch.js"></script>
+	<link rel="StyleSheet" media="screen" href="format.css">
+</head>
+<body onload='drawScores()'>
+	<div class="openingText">
+		<h1>Pokemon!</h1>
+		<p>Team Type Analysis Chart</p>
+	</div>
+	<form class="types" id="types" name="types" onsubmit="return false">
+		<table class="selectTable">
+		<tr class="selTableFormat">
+		<td class="selCellFormat">
+		<div class="poke1">
+			<h4>Pokemon 1:</h4>
+			<p>Type 1</p>
+			<select id="type1" name="type1" onchange="box1()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type2" name="type2" onchange="box2()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		<td class="selCellFormat">
+		<div class="poke2">
+			<h4>Pokemon 2:</h4>
+			<p>Type 1</p>
+			<select id="type3" name="type3" onchange="box3()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type4" name="type4" onchange="box4()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		<td class="selCellFormat">
+		<div class="poke3">
+			<h4>Pokemon 3:</h4>
+			<p>Type 1</p>
+			<select id="type5" name="type5" onchange="box5()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type6" name="type6" onchange="box6()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		<td class="selCellFormat">
+		<div class="poke4">
+			<h4>Pokemon 4:</h4>
+			<p>Type 1</p>
+			<select id="type7" name="type7" onchange="box7()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type8" name="type8" onchange="box8()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		<td class="selCellFormat">
+		<div class="poke5">
+			<h4>Pokemon 5:</h4>
+			<p>Type 1</p>
+			<select id="type9" name="type9" onchange="box9()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type10" name="type10" onchange="box10()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		<td class="selCellFormat">
+		<div class="poke6">
+			<h4>Pokemon 6:</h4>
+			<p>Type 1</p>
+			<select id="type11" name="type11" onchange="box11()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+			<p>Type 2</p>
+			<select id="type12" name="type12" onchange="box12()">
+				<option value="none">--NONE--</option>
+				<option value="Normal">Normal</option>
+				<option value="Fire">Fire</option>
+				<option value="Water">Water</option>
+				<option value="Grass">Grass</option>
+				<option value="Electric">Electric</option>
+				<option value="Ice">Ice</option>
+				<option value="Fighting">Fighting</option>
+				<option value="Poison">Poison</option>
+				<option value="Ground">Ground</option>
+				<option value="Flying">Flying</option>
+				<option value="Psychic">Psychic</option>
+				<option value="Bug">Bug</option>
+				<option value="Rock">Rock</option>
+				<option value="Ghost">Ghost</option>
+				<option value="Dragon">Dragon</option>
+				<option value="Steel">Steel</option>
+				<option value="Dark">Dark</option>
+				<option value="Fairy">Fairy</option>
+			</select>
+		</div>
+		</td>
+		</tr>
+		</table>
+		<br><br>
+		<table class="typeTable">
+			<tr>
+					<td class ="norText">Normal</td>	
+					<td class="norScore" id="norScore"></td>
+					<td class="watText">Water</td>
+					<td class="watScore" id="watScore"></td>
+					<td class="firText">Fire</td>
+					<td class="firScore" id="firScore"></td>
+					<td class="graText">Grass</td>
+					<td class="graScore" id="graScore"></td>
+					<td class="eleText">Electric</td>
+					<td class="eleScore" id="eleScore"></td>
+					<td class="iceText">Ice</td>
+					<td class="iceScore" id="iceScore"></td>
+			</tr>
+			<tr>
+					<td class="fghText">Fighting</td>
+					<td class="fghScore" id="fghScore"></td>
+					<td class="poiText">Poison</td>
+					<td class="poiScore" id="poiScore"></td>
+					<td class="flyText">Flying</td>
+					<td class="flyScore" id="flyScore"></td>
+					<td class="groText">Ground</td>
+					<td class="groScore" id="groScore"></td>
+					<td class="psyText">Psychic</td>
+					<td class="psyScore" id="psyScore"></td>
+					<td class="bugText">Bug</td>
+					<td class="bugScore" id="bugScore"></td>
+
+			</tr>
+			<tr>
+					<td class="rckText">Rock</td>
+					<td class="rckScore" id="rckScore"></td>
+					<td class="ghoText">Ghost</td>
+					<td class="ghoScore" id="ghoScore"></td>
+					<td class="draText">Dragon</td>
+					<td class="draScore" id="draScore"></td>
+					<td class="steText">Steel</td>
+					<td class="steScore" id="steScore"></td>
+					<td class="drkText">Dark</td>
+					<td class="drkScore" id="drkScore"></td>
+					<td class="faiText">Fairy</td>
+					<td class="faiScore" id="faiScore"></td>
+			</tr>
+		</table>
+		<br><br>
+	<div class="interpretText">
+		<h3><u>Interpreting Your Score</u></h3>
+		<p>For a resistance to a type you gain one point, and you lose one point for a weakness. 
+		Immunities are counted sperately and have no bearing on your score.</p>
+	</div>
+	<table class="immuneTable">
+		<tr id="immuNor"></tr>
+		<tr id="immuEle"></tr>
+		<tr id="immuFgh"></tr>
+		<tr id="immuPoi"></tr>
+		<tr id="immuGro"></tr>
+		<tr id="immuPsy"></tr>
+		<tr id="immuGho"></tr>
+		<tr id="immuDra"></tr>
+	</table>
+	</form>
+</body>
+</html>
+
+
+
