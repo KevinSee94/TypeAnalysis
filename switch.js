@@ -4336,5 +4336,3 @@ function box12(){
 	prev.t12 = getType12();
 	drawScores();
 }
-
-//WHERE YOU LEFT OFF: ADD A FUNCITON TO THE ONLOAD HANDLER TO RESET THE SELECT BOXES
